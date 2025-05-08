@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(13, 13, 13, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 93%;
+    z-index: 1000;
+  }
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5d742;
+    position: absolute;
+    left: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    margin-left: 50px;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #f5d742;
+    transform: scale(1.1);
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+    padding: 0 50px;
+    gap: 40px;
+}
+
+.text-section {
+    text-align: center;
+}
+
+.avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #f5d742;
+    box-shadow: 0 0 30px rgba(245, 215, 66, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInRight 1s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #f5d742;
+}
+
+.hello {
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.desc {
+    color: #ddd;
+    font-size: 22px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-top: 0px;
+}
+
+.job-title {
+    font-size: 24px;
+    color: #f5d742;
+    margin-bottom: 15px;
+    display: inline-block;
+    border-right: 3px solid #f5d742;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(20) 1s 1 normal forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 1;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.portfolio-section {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.portfolio-section h2 {
+    font-size: 30px;
+    color: #f5d742;
+    margin-bottom: 10px;
+}
+
+.portfolio-section .desc {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+.card {
+    display: inline-block;
+    width: 3000px;
+    height: 400px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: 1pt solid #f5d742;
+  outline-offset: 1px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 24px;
+    color: #f5d742;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(245, 215, 66, 0.8);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 100%;
+    /* Menyesuaikan lebar gambar dengan lebar card */
+    height: auto;
+    /* Menjaga aspek rasio gambar */
+    object-fit: cover;
+    /* Gambar akan mengisi area container dengan proporsi yang benar */
+}
+
+@keyframes popUp {
+0% {
+opacity: 0;
+transform: scale(0.8);
+}
+100% {
+opacity: 1;
+transform: scale(1);
+}
+}
+
+.card {
+animation: popUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+.h1 {
+animation: fadeIn 1s ease-out forwards;
+animation-delay: 0s;
+opacity: 0; 
+}
